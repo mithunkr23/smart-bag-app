@@ -1,17 +1,27 @@
-# smart_bag_app
+# Smart Bag System
 
-A new Flutter project.
+An intelligent mobile app that verifies whether required books are packed based on a timetable using RFID tags scanning and sends alerts if any are missing.
 
-## Getting Started
+## Features
+- Real-time RFID tag scanning (multi-scan)
+- Detects required vs detected books
+- Shows missing books
+- Handles unknown barcodes
+- SMS alerts (Twilio)
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- Flutter (Dart)
+- mobile_scanner
+- HTTP (Twilio API)
 
-A few resources to get you started if this is your first Flutter project:
+## How it works
+1. User taps **Scan Books**
+2. App scans multiple books for ~10 seconds
+3. Matches detected subjects with today’s timetable
+4. Shows **Detected** and **Missing**
+5. Sends SMS alert if needed
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Setup
+```bash
+flutter pub get
+flutter run
